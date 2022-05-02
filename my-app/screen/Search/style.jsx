@@ -5,14 +5,15 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
+		backgroundColor: "#fff",
 	},
 	search: {
-		flex: 1,
+		height: 30,
 		width: "100%",
-		backgroundColor: "red",
+		borderBottomColor: "#ddd",
+		borderBottomWidth: 1,
 	},
 	list: {
-		flex: 9,
-		width: "100%"
+		flex: 1,
 	}
 });

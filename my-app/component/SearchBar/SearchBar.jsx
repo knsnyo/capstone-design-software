@@ -12,9 +12,9 @@ export default () => {
 			style={styles.input}
 			onChangeText={setSearch}
 			value={search}
-			placeholder="search item"/>
+			placeholder="Search"/>
 			<Pressable style={styles.search}>
-				<Icon name="search1" size={40} color="black"/>
+				<Icon name="close" size={20} color="black"/>
 			</Pressable>
 		</View>
 	)

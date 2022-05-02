@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from "./screen/Home/Home";
 import Result from "./screen/Result/Result";
 import Search from "./screen/Search/Search";
-import WishList from "./screen/Wishlist/WishList";
+import WishList from "./screen/WishList/WishList";
 
 const Stack = createStackNavigator();
 
@@ -11,7 +11,7 @@ export default () => {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-      initialRouteName="Search"
+      initialRouteName="Home"
       screenOptions={{cardStyle: {backgroundColor: "#fff"}}}>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Search" component={Search}/>
