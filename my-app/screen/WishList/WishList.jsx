@@ -4,12 +4,12 @@ export default ({route, navigation}) => {
 	return (
 		<View>
 			<Button
-			title="Go Search"
-			onPress={() => navigation.navigate('Search')}
+			title="Go Result"
+			onPress={() => navigation.navigate('Result')}
 			/>
 			<Button
-			title="Go WishList"
-			onPress={() => navigation.navigate('WishList')}
+			title="Go Home"
+			onPress={() => navigation.navigate('Home')}
 			/>
 		</View>
 	)
