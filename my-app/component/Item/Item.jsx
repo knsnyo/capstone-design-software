@@ -1,10 +1,22 @@
-import { View, Text } from "react-native";
-import { styles } from "./style"
+import { useState } from "react";
+import { Pressable, Text, View, ImageBackground } from "react-native";
+import { styles } from "./style";
 
 export default (props) => {
-	return (
-		<View style={styles.container}>
-			<Text style={styles.text}>{props.title}안녕</Text>
-		</View>
-	)
-}
+  const [focus, setFocus] = useState(false);
+  return (
+    <Pressable style={styles.container} onPress={() => setFocus(!focus)}>
+      <ImageBackground
+        source={require("./test.jpg")}
+        resizeMode="contain"
+        style={styles.image}
+      >
+        {focus && (
+          <View style={styles.view}>
+            <Text style={styles.text}>눌렀어염</Text>
+          </View>
+        )}
+      </ImageBackground>
+    </Pressable>
+  );
+};

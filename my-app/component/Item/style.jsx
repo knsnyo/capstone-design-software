@@ -18,4 +18,16 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		textAlign: "center",
 	},
+	image: {
+		//flex: 1,
+		width: "100%",
+		height: "100%",
+	},
+	view: {
+		flex: 1,
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundColor: "#fff",
+	}
 });
