@@ -5,7 +5,6 @@ const height = Dimensions.get("window").height;
 
 export const styles = StyleSheet.create({
 	container: {
-		//flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
 		width: (width - (5 * 6)) / 3,
@@ -14,20 +13,41 @@ export const styles = StyleSheet.create({
 		borderWidth: 1,
 		margin: 5,
 	},
-	text: {
-		flex: 1,
-		textAlign: "center",
-	},
 	image: {
-		//flex: 1,
+		flex: 1,
 		width: "100%",
 		height: "100%",
 	},
 	view: {
 		flex: 1,
-		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "flex-start",
+		backgroundColor: "rgba(5,5,5,0.8)",
+	},
+	press: {
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: "#fff",
+		borderColor: "red",
+		margin: 5,
+		padding: 5,
+	},
+	content: {
+		justifyContent: "center",
+		alignItems: "center",
+		flex: 1,
+		width: "100%",
+	},
+	title: {
+		flex: 1,
+		textAlign: "center",
+		fontSize: 24,
+		color: "white",
+	},
+	description: {
+		flex: 3,
+		justifyContent: "center",
+		alignItems: "center",
+		fontSize: 16,
+		color: "white",
 	}
 });
