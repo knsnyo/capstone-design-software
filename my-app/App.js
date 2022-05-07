@@ -11,7 +11,7 @@ export default () => {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-      initialRouteName="Result"
+      initialRouteName="Home"
       screenOptions={{cardStyle: {backgroundColor: "#fff"}}}>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Search" component={Search}/>
