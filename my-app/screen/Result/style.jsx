@@ -7,13 +7,9 @@ export const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: "#fff",
 	},
-	search: {
-		height: 30,
-		width: "100%",
-		borderBottomColor: "#ddd",
-		borderBottomWidth: 1,
-	},
-	list: {
+	area: {
 		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
 	}
 });

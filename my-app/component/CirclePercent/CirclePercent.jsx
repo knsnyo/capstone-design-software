@@ -9,7 +9,7 @@ export default (props) => {
         <Text style={styles.text}>{props.serviceName}</Text>
       </View>
       <View style={styles.percent}>
-        <Progress.Bar progress={props.percent} color={props.color}/>
+        <Progress.Circle progress={props.percent} color={props.color}/>
       </View>
     </View>
   );
