@@ -8,11 +8,12 @@ export default () => {
 
 	return (
 		<View style={styles.container}>
-			<TextInput
+		<TextInput
 			style={styles.input}
 			onChangeText={setSearch}
 			value={search}
-			placeholder="Search"/>
+			placeholder="Search"
+		/>
 			<Pressable style={styles.search}>
 				<Icon name="close" size={20} color="black"/>
 			</Pressable>

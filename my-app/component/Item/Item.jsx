@@ -20,13 +20,7 @@ export default (props) => {
             </Pressable>
             <View style={styles.content}>
               <Text style={styles.title}>title</Text>
-              <Text style={styles.description}>{
-`
-description
-description
-description
-`
-							}</Text>
+              <Text style={styles.description}>Description is very long. And I am so tired.</Text>
             </View>
           </View>
         )}

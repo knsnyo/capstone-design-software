@@ -1,5 +1,6 @@
+import { ContextProvider } from "./context/Context";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./screen/Home/Home";
 import Result from "./screen/Result/Result";
 import Search from "./screen/Search/Search";
@@ -9,15 +10,18 @@ const Stack = createStackNavigator();
 
 export default () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator 
-      initialRouteName="Result"
-      screenOptions={{cardStyle: {backgroundColor: "#fff"}}}>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Search" component={Search}/>
-        <Stack.Screen name="WishList" component={WishList}/>
-        <Stack.Screen name="Result" component={Result}/>
-      </Stack.Navigator>
-    </NavigationContainer>
+    <ContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{ cardStyle: { backgroundColor: "#fff" } }}
+        >
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Search" component={Search} />
+          <Stack.Screen name="WishList" component={WishList} />
+          <Stack.Screen name="Result" component={Result} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ContextProvider>
   );
-}
+};

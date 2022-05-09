@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
 	},
 	area: {
 		flex: 1,
+		width: "100%",
 		justifyContent: "center",
 		alignItems: "center",
 	}
