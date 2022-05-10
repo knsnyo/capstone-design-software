@@ -6,16 +6,17 @@ export const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		flexDirection: "row",
-		height: 30,
+		height: 60,
 	},
 	input: {
 		flex: 1,
-		height: 30,
+		height: 60,
 		textAlign: "center",
+		fontSize: 20,
 	},
-	search: {
-		width: 30,
-		height: 30,
+	delete: {
+		width: 60,
+		height: 60,
 		justifyContent: "center",
 		alignItems: "center",
 	},

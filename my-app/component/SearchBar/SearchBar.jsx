@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TextInput, Pressable, View } from "react-native";
-import  Icon  from "react-native-vector-icons/AntDesign";
+import Icon from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
 
 export default () => {
@@ -14,8 +14,8 @@ export default () => {
 			value={search}
 			placeholder="Search"
 		/>
-			<Pressable style={styles.search}>
-				<Icon name="close" size={20} color="black"/>
+			<Pressable style={styles.delete}>
+				<Icon name="close" size={40} color="black"/>
 			</Pressable>
 		</View>
 	)

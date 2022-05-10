@@ -5,16 +5,11 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "space-around",
 		alignItems: "center",
-		backgroundColor: "#fff",
+		flexDirection: "row",
 	},
-	area: {
+	press: {
 		flex: 1,
-		width: "100%",
 		justifyContent: "center",
 		alignItems: "center",
-	},
-	navbar: {
-		width: "100%",
-		height: 60,
 	}
 });

@@ -3,6 +3,7 @@ import BarPercent from "../../component/BarPercent/BarPercent";
 import PiePercent from "../../component/PiePercent/PiePercent";
 import CirclePercent from "../../component/CirclePercent/CirclePercent";
 import { styles } from "./style";
+import Navbar from "../../component/Navbar/Navbar";
 
 export default ({ route, navigation }) => {
   return (
@@ -27,6 +28,9 @@ export default ({ route, navigation }) => {
         <CirclePercent serviceName="WatCha" percent={0.7} color="pink" />
         <CirclePercent serviceName="Tving" percent={0.9} color="violet" />
         <CirclePercent serviceName="Disney+" percent={0.5} color="blue" />
+      </View>
+      <View style={styles.navbar}>
+        <Navbar route={route} navigation={navigation}/>
       </View>
     </View>
   );

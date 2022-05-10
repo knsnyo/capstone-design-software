@@ -15,5 +15,9 @@ export const styles = StyleSheet.create({
 	},
 	list: {
 		flex: 1,
+	},
+	navbar: {
+		width: "100%",
+		height: 60,
 	}
 });

@@ -9,14 +9,14 @@ export default (props) => {
   return (
     <Pressable style={styles.container} onPress={() => setFocus(!focus)}>
       <ImageBackground
-        source={require("./test.jpg")}
-        resizeMode="contain"
+        source={require("./멜로가체질.jpg")}
+        resizeMode="stretch"
         style={styles.image}
       >
         {focus && (
           <View style={styles.view}>
             <Pressable style={styles.press} onPress={() => setWish(!wish)}>
-              <Icon name={wish ?"pushpin" : "pushpino"} size={16} color={"red"} />
+              <Icon name={wish ?"star" : "staro"} size={16} color={"yellow"} />
             </Pressable>
             <View style={styles.content}>
               <Text style={styles.title}>title</Text>

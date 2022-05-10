@@ -9,9 +9,11 @@ export const styles = StyleSheet.create({
 		alignItems: "center",
 		width: (width - (5 * 6)) / 3,
 		height: height/5,
-		borderColor: "#ddd",
-		borderWidth: 1,
 		margin: 5,
+		backgroundColor: "#fff",
+		borderWidth: 1,
+		borderColor: "#ddd",
+		borderRadius: 15,
 	},
 	image: {
 		flex: 1,
