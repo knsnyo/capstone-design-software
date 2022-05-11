@@ -29,9 +29,11 @@ export default ({ route, navigation }) => {
         <CirclePercent serviceName="Tving" percent={0.9} color="violet" />
         <CirclePercent serviceName="Disney+" percent={0.5} color="blue" />
       </View>
+      {/* 
       <View style={styles.navbar}>
         <Navbar route={route} navigation={navigation}/>
       </View>
+      */}
     </View>
   );
 };

@@ -9,9 +9,11 @@ export default ({ route, navigation }) => {
       <View style={styles.list}>
         <ItemList />
       </View>
+      {/* 
       <View style={styles.navbar}>
         <Navbar route={route} navigation={navigation}/>
       </View>
+      */}
     </View>
   );
 };

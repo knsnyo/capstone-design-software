@@ -6,6 +6,15 @@ import Icon from "react-native-vector-icons/AntDesign";
 export default (props) => {
   const [focus, setFocus] = useState(false);
 	const [wish, setWish] = useState(false);
+
+  const pressStar = () => {
+    if (wish) {
+
+    } else {
+      
+    }
+    setWish(!wish);
+  }
   return (
     <Pressable style={styles.container} onPress={() => setFocus(!focus)}>
       <ImageBackground
@@ -15,8 +24,8 @@ export default (props) => {
       >
         {focus && (
           <View style={styles.view}>
-            <Pressable style={styles.press} onPress={() => setWish(!wish)}>
-              <Icon name={wish ?"star" : "staro"} size={16} color={"yellow"} />
+            <Pressable style={styles.press} onPress={pressStar}>
+              <Icon name={wish ?"star" : "staro"} size={25} color={"yellow"} />
             </Pressable>
             <View style={styles.content}>
               <Text style={styles.title}>title</Text>
