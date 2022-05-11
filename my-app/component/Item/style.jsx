@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
 	title: {
 		flex: 1,
 		textAlign: "center",
-		fontSize: 24,
+		fontSize: 16,
 		color: "white",
 	},
 	description: {

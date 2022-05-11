@@ -1,19 +1,16 @@
+import { useContext } from "react";
 import { View, Button } from "react-native";
 import ItemList from "../../component/ItemList/ItemList";
+import { Context } from "../../context/Context";
 import { styles } from "./style";
-import Navbar from "../../component/Navbar/Navbar";
 
-export default ({ route, navigation }) => {
+export default () => {
+  const { state, dispatch } = useContext(Context);
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <ItemList />
+        <ItemList list={state.list}/>
       </View>
-      {/* 
-      <View style={styles.navbar}>
-        <Navbar route={route} navigation={navigation}/>
-      </View>
-      */}
     </View>
   );
 };

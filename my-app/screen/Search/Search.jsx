@@ -1,24 +1,21 @@
-import { useEffect } from "react";
+import { useContext } from "react";
 import { View } from "react-native";
 import ItemList from "../../component/ItemList/ItemList";
 import SearchBar from "../../component/SearchBar/SearchBar";
-import Navbar from "../../component/Navbar/Navbar";
+import { Context } from "../../context/Context";
 import { styles } from "./style";
 
-export default ({ route, navigation }) => {
+export default () => {
+  const { state, dispatch } = useContext(Context);
+
   return (
     <View style={styles.container}>
       <View style={styles.search}>
         <SearchBar />
       </View>
       <View style={styles.list}>
-        <ItemList />
+        <ItemList list={state.list}/>
       </View>
-      {/* 
-      <View style={styles.navbar}>
-        <Navbar route={route} navigation={navigation}/>
-      </View>
-      */}
     </View>
   );
 };
