@@ -11,7 +11,7 @@ export default ({props}) => {
 
   const pressStar = () => {
     if (wish) {
-      dispatch({type: "DELETE", payload: props.title});
+      dispatch({type: "DELETE", payload: props});
     } else {
       dispatch({type: "ADD", payload: props});
     }
