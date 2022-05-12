@@ -11,7 +11,7 @@ const Reducer = (state, action) => {
 		}
 		//delete wishlist
 		case "DELETE": {
-			const deletedWishList = state.todos.filter((wishlist) => (wishlist.id !== action.payload.id));
+			const deletedWishList = state.wishlist.filter((wish) => (wish.title !== action.payload.title));
 			return {
 				...state,
 				wishlist: deletedWishList,
@@ -19,8 +19,11 @@ const Reducer = (state, action) => {
 		}
 
 		/* search item */
+		//search list
 		case "SEARCH": {
+			return {
 
+			}
 		}
 	}
 }

@@ -1,26 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Pressable, Text, View, ImageBackground } from "react-native";
 import { styles } from "./style";
 import Icon from "react-native-vector-icons/AntDesign";
+import { Context } from "../../context/Context";
 
 export default ({props}) => {
+  const { state, dispatch } = useContext(Context);
   const [focus, setFocus] = useState(false);
 	const [wish, setWish] = useState(false);
 
   const pressStar = () => {
     if (wish) {
-
+      dispatch({type: "DELETE", payload: props.title});
     } else {
-
+      dispatch({type: "ADD", payload: props});
     }
     setWish(!wish);
   };
-  
+
   return (
     <Pressable style={styles.container} onPress={() => setFocus(!focus)}>
       <ImageBackground
         source={props.image}
-        //source={require(`./image/${"스파이_패밀리.jpg"}`)}
         resizeMode="stretch"
         style={styles.image}
       >

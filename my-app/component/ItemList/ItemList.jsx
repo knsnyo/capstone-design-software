@@ -21,7 +21,8 @@ export default ({list}) => {
     <View style={styles.container}>
       <FlatList
         data={list}
-        renderItem={({ item }) => <Item key={item.title} props={item} />}
+        renderItem={({ item }) => <Item props={item} />}
+        keyExtractor={(item) => item.title}
         numColumns={3}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />

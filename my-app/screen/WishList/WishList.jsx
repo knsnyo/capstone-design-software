@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { View, Button } from "react-native";
+import { View } from "react-native";
 import ItemList from "../../component/ItemList/ItemList";
 import { Context } from "../../context/Context";
 import { styles } from "./style";
@@ -9,7 +9,7 @@ export default () => {
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <ItemList list={state.list}/>
+        <ItemList list={state.wishlist}/>
       </View>
     </View>
   );
