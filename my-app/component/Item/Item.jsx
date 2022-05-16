@@ -4,10 +4,10 @@ import { styles } from "./style";
 import Icon from "react-native-vector-icons/AntDesign";
 import { Context } from "../../context/Context";
 
-export default ({props}) => {
+export default ({props, wishlist}) => {
   const { state, dispatch } = useContext(Context);
   const [focus, setFocus] = useState(false);
-	const [wish, setWish] = useState(false);
+	const [wish, setWish] = useState(wishlist);
 
   const pressStar = () => {
     if (wish) {

@@ -3,7 +3,7 @@ import { View, FlatList, RefreshControl } from "react-native";
 import Item from "../Item/Item";
 import { styles } from "./style";
 
-export default ({list}) => {
+export default ({list, wishlist}) => {
 
   const [refreshing, setRefreshing] = useState(false);
   const wait = (timeout) => {
@@ -21,7 +21,7 @@ export default ({list}) => {
     <View style={styles.container}>
       <FlatList
         data={list}
-        renderItem={({ item }) => <Item props={item} />}
+        renderItem={({ item }) => <Item props={item} wishlist={wishlist}/>}
         keyExtractor={(item) => item.title}
         numColumns={3}
         refreshControl={

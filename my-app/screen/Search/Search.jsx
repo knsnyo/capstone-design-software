@@ -14,7 +14,7 @@ export default () => {
         <SearchBar />
       </View>
       <View style={styles.list}>
-        <ItemList list={state.list}/>
+        <ItemList list={state.list} wishlist={false}/>
       </View>
     </View>
   );
