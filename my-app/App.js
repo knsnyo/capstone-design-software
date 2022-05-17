@@ -30,7 +30,7 @@ export default () => {
             component={WishList}
             options={{
               tabBarIcon: () => (
-                <Icon name="staro" size={40} color="yellow"/>
+                <Icon name="star" size={40} color="yellow"/>
               )
             }}
           />

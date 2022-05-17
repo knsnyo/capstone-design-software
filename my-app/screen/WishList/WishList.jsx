@@ -6,10 +6,11 @@ import { styles } from "./style";
 
 export default () => {
   const { state, dispatch } = useContext(Context);
+
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <ItemList list={state.wishlist} wishlist={true}/>
+        <ItemList list={state.wishlist}/>
       </View>
     </View>
   );

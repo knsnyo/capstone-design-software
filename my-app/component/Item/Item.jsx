@@ -3,20 +3,39 @@ import { Pressable, Text, View, ImageBackground } from "react-native";
 import { styles } from "./style";
 import Icon from "react-native-vector-icons/AntDesign";
 import { Context } from "../../context/Context";
+import { addWishList, deleteWishList } from "../../context/asyncStorage";
+import AsyncStorage from "@react-native-async-storage/async-storage"
 
-export default ({props, wishlist}) => {
+export default ({props}) => {
   const { state, dispatch } = useContext(Context);
   const [focus, setFocus] = useState(false);
-	const [wish, setWish] = useState(wishlist);
+	const [wish, setWish] = useState(false);
 
   const pressStar = () => {
     if (wish) {
+      deleteWishList(props);
       dispatch({type: "DELETE", payload: props});
     } else {
+      addWishList(props);
       dispatch({type: "ADD", payload: props});
     }
     setWish(!wish);
   };
+
+  useEffect(async () => {
+    try {
+      const load = await AsyncStorage.getItem("wishlist");
+      const data = JSON.parse(load || "{}");
+      const index = data.findIndex((d) => d.title === props.title)
+      if (-1 !== index){
+        setWish(true);
+      } else {
+        setWish(false);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
   return (
     <Pressable style={styles.container} onPress={() => setFocus(!focus)}>

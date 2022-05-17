@@ -17,6 +17,13 @@ const Reducer = (state, action) => {
 				wishlist: deletedWishList,
 			}
 		}
+		//initial wishlist
+		case "GET": {
+			return {
+				...state,
+				wishlist: action.payload,
+			}
+		}
 
 		/* search item */
 		//search list
