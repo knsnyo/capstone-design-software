@@ -3,9 +3,18 @@ import BarPercent from "../../component/BarPercent/BarPercent";
 import PiePercent from "../../component/PiePercent/PiePercent";
 import CirclePercent from "../../component/CirclePercent/CirclePercent";
 import { styles } from "./style";
-import Navbar from "../../component/Navbar/Navbar";
+import { useIsFocused } from "@react-navigation/native";
+import { useEffect } from "react";
 
 export default ({ route, navigation }) => {
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (isFocused) {
+      console.log("RESULT");
+    }
+  }, [isFocused]);
+
   return (
     <View style={styles.container}>
       <View style={styles.area}>

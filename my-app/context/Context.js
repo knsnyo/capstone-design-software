@@ -19,8 +19,8 @@ export const ContextProvider = ({ children }) => {
       const load = await AsyncStorage.getItem("wishlist");
       const data = JSON.parse(load || "{}");
       //console.log(data);
-  
-      (null !== load) && dispatch({type: "GET", payload: data});
+      
+      (null !== load) && dispatch({type: "SET", payload: data});
     } catch (err) {
       console.log(err);
     }

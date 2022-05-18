@@ -5,11 +5,13 @@ import Icon from "react-native-vector-icons/AntDesign";
 import { Context } from "../../context/Context";
 import { addWishList, deleteWishList } from "../../context/asyncStorage";
 import AsyncStorage from "@react-native-async-storage/async-storage"
+import { useIsFocused } from "@react-navigation/native";
 
 export default ({props}) => {
   const { state, dispatch } = useContext(Context);
   const [focus, setFocus] = useState(false);
 	const [wish, setWish] = useState(false);
+  const isFocused = useIsFocused();
 
   const pressStar = () => {
     if (wish) {
@@ -35,7 +37,7 @@ export default ({props}) => {
     } catch (err) {
       console.log(err);
     }
-  }, []);
+  }, [isFocused]);
 
   return (
     <Pressable style={styles.container} onPress={() => setFocus(!focus)}>

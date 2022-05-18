@@ -18,7 +18,7 @@ const Reducer = (state, action) => {
 			}
 		}
 		//initial wishlist
-		case "GET": {
+		case "SET": {
 			return {
 				...state,
 				wishlist: action.payload,
