@@ -14,7 +14,7 @@ export default () => {
 			value={search}
 			placeholder="Search"
 		/>
-			<Pressable style={styles.delete}>
+			<Pressable style={styles.delete} onPress={() => setSearch("")}>
 				<Icon name="close" size={40} color="black"/>
 			</Pressable>
 		</View>
