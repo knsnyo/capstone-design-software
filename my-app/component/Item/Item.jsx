@@ -53,7 +53,6 @@ export default ({props}) => {
             </Pressable>
             <View style={styles.content}>
               <Text style={styles.title}>{props.title}</Text>
-              <Text style={styles.description}></Text>
             </View>
           </View>
         )}

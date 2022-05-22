@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
 		textAlign: "center",
 		fontSize: 16,
 		borderWidth: 1,
+		backgroundColor: "#fff",
 		borderColor: "#0F0",
 		padding: 1,
 		borderRadius: 16,

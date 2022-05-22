@@ -6,6 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const INIT_STATE = {
   ...list,
   wishlist: [],
+  like: [],
 };
 
 export const Context = createContext(INIT_STATE);
