@@ -9,9 +9,9 @@ export default ({text}) => {
 
 	const onPress = () => {
 		if( -1 === find) {
-			dispatch({type: "LIKE", payload: text});
+			dispatch({type: "ADD_LIKE", payload: text});
 		} else {
-			dispatch({type: "DISLIKE", payload: text});
+			dispatch({type: "DELETE_LIKE", payload: text});
 		}
 	}
 	return (

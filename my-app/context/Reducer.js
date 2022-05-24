@@ -2,7 +2,7 @@ const Reducer = (state, action) => {
 	switch (action.type) {
 		/* wishlist */
 		//add wishlist
-		case "ADD": {
+		case "ADD_WISHLIST": {
 			const addedWishList = [...state.wishlist, action.payload];
 			return {
 				...state,
@@ -10,7 +10,7 @@ const Reducer = (state, action) => {
 			}
 		}
 		//delete wishlist
-		case "DELETE": {
+		case "DELETE_WISHLIST": {
 			const deletedWishList = state.wishlist.filter((wish) => (wish.title !== action.payload.title));
 			return {
 				...state,
@@ -18,7 +18,7 @@ const Reducer = (state, action) => {
 			}
 		}
 		//initial wishlist
-		case "SET": {
+		case "SET_WISHLIST": {
 			return {
 				...state,
 				wishlist: action.payload,
@@ -35,7 +35,7 @@ const Reducer = (state, action) => {
 
 		/* like */
 		// like
-		case "LIKE": {
+		case "ADD_LIKE": {
 			const addLike = [...state.like, action.payload];
 			return {
 				...state,
@@ -44,7 +44,7 @@ const Reducer = (state, action) => {
 		}
 
 		// dislike
-		case "DISLIKE": {
+		case "DELETE_LIKE": {
 			const dislike = state.like.filter((like) => (like !== action.payload));
 			return {
 				...state,

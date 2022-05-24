@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
       const data = JSON.parse(load || "{}");
       //console.log(data);
       
-      (null !== load) && dispatch({type: "SET", payload: data});
+      (null !== load) && dispatch({type: "SET_WISHLIST", payload: data});
     } catch (err) {
       console.log(err);
     }

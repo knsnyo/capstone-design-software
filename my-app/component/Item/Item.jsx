@@ -16,10 +16,10 @@ export default ({props}) => {
   const pressStar = () => {
     if (wish) {
       deleteWishList(props);
-      dispatch({type: "DELETE", payload: props});
+      dispatch({type: "DELETE_WISHLIST", payload: props});
     } else {
       addWishList(props);
-      dispatch({type: "ADD", payload: props});
+      dispatch({type: "ADD_WISHLIST", payload: props});
     }
     setWish(!wish);
   };

@@ -26,3 +26,20 @@ export const deleteWishList = async (wishlist) => {
 		console.log(err);
 	}
 }
+
+export const addLike = async (like) => {
+	try {
+		const load = await AsyncStorage.getItem("like");
+		const data = JSON.parse(load || "{}");
+		let update;
+
+		if(null !== load) {
+			update = [...data, like];
+		} else {
+			update = [like];
+		}
+		await AsyncStorage.setItem("like", JSON.stringify(update));
+	} catch (err) {
+		console.log(err);
+	}
+}
