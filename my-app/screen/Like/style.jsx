@@ -6,5 +6,12 @@ export const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		backgroundColor: "#fff",
+		width: "100%",
+	},
+	text: {
+		fontSize: 28,
+		fontStyle: "italic",
+		textAlign: "center",
+		width: "100%",
 	}
 });

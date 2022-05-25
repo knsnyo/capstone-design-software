@@ -5,5 +5,10 @@ export const styles = StyleSheet.create({
 		width: "100%",
 		flexDirection: "row",
 		flexWrap: "wrap",
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "flex-start",
+		borderBottomWidth: 1,
+		borderColor: "#ddd",
 	}
 })

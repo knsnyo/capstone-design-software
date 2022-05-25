@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import TagList from "../../component/TagList/TagList";
 import { Context } from "../../context/Context";
 import { styles } from "./style";
@@ -10,9 +10,11 @@ export default () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.container}>
+				<Text style={styles.text}>나의 취향</Text>
 				<TagList genre={state.like}/>
 			</View>
 			<View style={styles.container}>
+				<Text style={styles.text}>취향 목록</Text>
 				<TagList genre={genre}/>
 			</View>
 		</View>
