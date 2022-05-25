@@ -27,14 +27,14 @@ const Reducer = (state, action) => {
 
 		/* item */
 		//search list
-		case "SEARCH": {
+		case "SEARCH_ITEM": {
 			return {
 
 			}
 		}
 
 		/* like */
-		// like
+		//add like
 		case "ADD_LIKE": {
 			const addLike = [...state.like, action.payload];
 			return {
@@ -42,13 +42,19 @@ const Reducer = (state, action) => {
 				like: addLike,
 			}
 		}
-
-		// dislike
+		//delete like
 		case "DELETE_LIKE": {
 			const dislike = state.like.filter((like) => (like !== action.payload));
 			return {
 				...state,
 				like: dislike,
+			}
+		}
+		//set like
+		case "SET_LIKE": {
+			return {
+				...state,
+				like: action.payload,
 			}
 		}
 	}

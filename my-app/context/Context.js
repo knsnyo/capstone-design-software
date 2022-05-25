@@ -17,11 +17,13 @@ export const ContextProvider = ({ children }) => {
   useEffect(async () => {
     try {
       //await AsyncStorage.clear();
-      const load = await AsyncStorage.getItem("wishlist");
-      const data = JSON.parse(load || "{}");
-      //console.log(data);
-      
-      (null !== load) && dispatch({type: "SET_WISHLIST", payload: data});
+      const loadWish = await AsyncStorage.getItem("wishlist");
+      const dataWish = JSON.parse(loadWish || "{}");
+      (null !== loadWish) && dispatch({type: "SET_WISHLIST", payload: dataWish});
+
+      const loadLike = await AsyncStorage.getItem("like");
+      const dataLike = JSON.parse(loadLike || "{}");
+      (null !== loadLike) && dispatch({type: "SET_LIKE", payload: dataLike});
     } catch (err) {
       console.log(err);
     }
