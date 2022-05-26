@@ -8,13 +8,13 @@ export const styles = StyleSheet.create({
     alignItems: "center",
 		flexDirection: "row",
   },
-  name: {
-    flex: 1,
-  },
   text: {
+    flex: 1,
     textAlign: "center"
   },
   percent: {
     flex: 3,
-  }
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });

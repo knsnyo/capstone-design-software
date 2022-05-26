@@ -5,12 +5,11 @@ import { styles } from "./style";
 export default (props) => {
   return (
     <View style={styles.container}>
-      <View style={styles.name}>
-        <Text style={styles.text}>{props.serviceName}</Text>
-      </View>
+      <Text style={styles.text}>{props.serviceName}</Text>
       <View style={styles.percent}>
         <Progress.Bar progress={props.percent} color={props.color}/>
       </View>
+      <Text style={styles.text}>{props.percent * 100}%</Text>
     </View>
   );
 };

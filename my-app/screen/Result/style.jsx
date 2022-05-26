@@ -16,5 +16,11 @@ export const styles = StyleSheet.create({
 	navbar: {
 		width: "100%",
 		height: 60,
+	},
+	text: {
+		fontSize: 28,
+		fontStyle: "italic",
+		textAlign: "center",
+		width: "100%",
 	}
 });
