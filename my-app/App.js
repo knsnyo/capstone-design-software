@@ -6,6 +6,7 @@ import Search from "./screen/Search/Search";
 import WishList from "./screen/WishList/WishList";
 import Like from "./screen/Like/Like";
 import Icon from "react-native-vector-icons/AntDesign";
+import Title from "./screen/Title/Title";
 
 const Tab = createBottomTabNavigator();
 
