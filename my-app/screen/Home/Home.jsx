@@ -6,21 +6,21 @@ export default ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.rowHigh}>
-        <Pressable style={styles.button} onPress={() => navigation.navigate("Tabs")}>
+        <Pressable style={styles.button} onPress={() => navigation.push("Tabs", {id: "Search"})}>
           <Icon name="search1" size={40} color="black" />
 					<Text>Search</Text>
         </Pressable>
-        <Pressable style={styles.button} onPress={() => navigation.navigate("Tabs")}>
+        <Pressable style={styles.button} onPress={() => navigation.push("Tabs", {id: "WishList"})}>
           <Icon name="star" size={40} color="yellow"/>
 					<Text>WishList</Text>
         </Pressable>
       </View>
       <View style={styles.rowBottom}>
-        <Pressable style={styles.button} onPress={() => navigation.navigate("Tabs")}>
+        <Pressable style={styles.button} onPress={() => navigation.push("Tabs", {id: "Like"})}>
           <Icon name="heart" size={40} color="red"/>
 					<Text>Favorite</Text>
         </Pressable>
-        <Pressable style={styles.button} onPress={() => navigation.navigate("Tabs")}>
+        <Pressable style={styles.button} onPress={() => navigation.push("Tabs", {id: "Result"})}>
           <Icon name="barschart" size={40} color="black"/>
 					<Text>Result</Text>
         </Pressable>

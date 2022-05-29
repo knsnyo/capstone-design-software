@@ -12,9 +12,16 @@ import Home from "./screen/Home/Home";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-const TabNavigator = () => {
+const TabNavigator = (props) => {
+  //console.log(props.route.params.id);
   return (
-    <Tab.Navigator screenOptions={{ cardStyle: { backgroundColor: "#fff" } }}>
+    <Tab.Navigator
+      screenOptions={{
+        cardStyle: { backgroundColor: "#fff" },
+        headerShown: false,
+      }}
+      initialRouteName={props.route.params.id}
+    >
       <Tab.Screen
         name="Search"
         component={Search}
@@ -46,6 +53,7 @@ const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
+
 
 export default () => {
   return (
