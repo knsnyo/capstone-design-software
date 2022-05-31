@@ -10,10 +10,6 @@ export default () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.container}>
-				<Text style={styles.text}>나의 취향</Text>
-				<TagList genre={state.like} use="Like"/>
-			</View>
-			<View style={styles.container}>
 				<Text style={styles.text}>취향 목록</Text>
 				<TagList genre={genre} use="Like"/>
 			</View>
