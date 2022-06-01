@@ -8,9 +8,25 @@ import WishList from "./screen/WishList/WishList";
 import Like from "./screen/Like/Like";
 import Icon from "react-native-vector-icons/AntDesign";
 import Home from "./screen/Home/Home";
+import SearchResult from "./screen/SearchResult/SearchResult";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+const SearchStack = createStackNavigator();
+
+const SearchNavigator = (props) => {
+  return (
+    <SearchStack.Navigator
+      screenOptions={{
+        cardStyle: { backgroundColor: "#fff" },
+        headerShown: false,
+      }}
+    >
+      <SearchStack.Screen component={Search}/>
+      <SearchStack.Screen component={SearchResult}/>
+    </SearchStack.Navigator>
+  );
+};
 
 const TabNavigator = (props) => {
   //console.log(props.route.params.id);
@@ -53,7 +69,6 @@ const TabNavigator = (props) => {
     </Tab.Navigator>
   );
 };
-
 
 export default () => {
   return (
