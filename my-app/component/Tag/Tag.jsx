@@ -4,7 +4,7 @@ import { Pressable, Text } from "react-native";
 import { styles } from "./style";
 import { addLike, deleteLike } from "../../context/asyncStorage";
 
-export default ({text, use}) => {
+export default ({text, use, navigation}) => {
 	const { state, dispatch } = useContext(Context);
 	const find = state.like.findIndex((e) => e === text);
 	const [click, setClick] = useState(false);
@@ -26,13 +26,17 @@ export default ({text, use}) => {
 					deleteLike(text);
 				}
 				setClick(!click);
+
+				break;
 			}
 			case "Search": {
+				navigation.push("SearchResult", {id: text});
 
+				break;
 			}
 
 			default: {
-				
+				console.log("error 잡아야지? 못 잡겠지?");
 			}
 		}
 	}

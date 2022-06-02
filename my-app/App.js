@@ -14,20 +14,6 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const SearchStack = createStackNavigator();
 
-const SearchNavigator = (props) => {
-  return (
-    <SearchStack.Navigator
-      screenOptions={{
-        cardStyle: { backgroundColor: "#fff" },
-        headerShown: false,
-      }}
-    >
-      <SearchStack.Screen component={Search}/>
-      <SearchStack.Screen component={SearchResult}/>
-    </SearchStack.Navigator>
-  );
-};
-
 const TabNavigator = (props) => {
   //console.log(props.route.params.id);
   return (
@@ -74,9 +60,15 @@ export default () => {
   return (
     <ContextProvider>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerTitleAlign: "center",
+          }}
+        >
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Tabs" component={TabNavigator} />
+          <Stack.Screen name="Menu" component={TabNavigator} />
+          <Stack.Screen name="SearchResult" component={SearchResult} />
         </Stack.Navigator>
       </NavigationContainer>
     </ContextProvider>

@@ -6,7 +6,7 @@ import TagList from "../../component/TagList/TagList";
 import { Context } from "../../context/Context";
 import { styles } from "./style";
 
-export default () => {
+export default ({navigation}) => {
   const { state, dispatch } = useContext(Context);
   const genre = [
     "범죄",
@@ -30,7 +30,7 @@ export default () => {
         </View>
       </View>
       <View style={styles.container}>
-        <TagList genre={genre} use="Search"/>
+        <TagList genre={genre} use="Search" navigation={navigation}/>
       </View>
     </View>
   );
