@@ -30,7 +30,7 @@ export default ({text, use, navigation}) => {
 				break;
 			}
 			case "Search": {
-				navigation.push("SearchResult", {id: text});
+				navigation.push("SearchResult", {id: text, search: "tag"});
 
 				break;
 			}

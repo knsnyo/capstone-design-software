@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { View } from "react-native";
 import ItemList from "../../component/ItemList/ItemList";
 import SearchBar from "../../component/SearchBar/SearchBar";
