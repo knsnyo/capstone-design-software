@@ -26,7 +26,7 @@ export default ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.container}>
         <View style={styles.search}>
-          <SearchBar />
+          <SearchBar navigation={navigation}/>
         </View>
       </View>
       <View style={styles.container}>

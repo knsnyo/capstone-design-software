@@ -3,19 +3,23 @@ import { TextInput, Pressable, View } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
 
-export default () => {
-	const [search, setSearch] = useState("");
+export default ({navigation}) => {
+	const [item, setItem] = useState("");
+
+	const searchItem = (item) => {
+		navigation.push("SearchResult", {id: item, search: "item"});
+	}
 
 	return (
 		<View style={styles.container}>
 		<TextInput
 			style={styles.input}
-			onChangeText={setSearch}
-			value={search}
+			onChangeText={setItem}
+			value={item}
 			placeholder="Search"
 		/>
-			<Pressable style={styles.delete} onPress={() => setSearch("")}>
-				<Icon name="close" size={40} color="black"/>
+			<Pressable style={styles.delete} onPress={() => searchItem(item)}>
+				<Icon name="search1" size={40} color="black"/>
 			</Pressable>
 		</View>
 	)
