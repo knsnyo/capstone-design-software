@@ -7,6 +7,7 @@ const INIT_STATE = {
   ...list,
   wishlist: [],
   like: [],
+  search: [],
 };
 
 export const Context = createContext(INIT_STATE);

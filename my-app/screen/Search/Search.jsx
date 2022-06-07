@@ -29,7 +29,8 @@ export default ({navigation}) => {
           <SearchBar navigation={navigation}/>
         </View>
       </View>
-      <View style={styles.container}>
+      <View style={{height: 20}}></View>
+      <View style={styles.tag}>
         <TagList genre={genre} use="Search" navigation={navigation}/>
       </View>
     </View>

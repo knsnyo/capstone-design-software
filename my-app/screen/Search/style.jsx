@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: "center",
+		justifyContent: "flex-end",
 		alignItems: "center",
 		backgroundColor: "#fff",
 		width: "100%",
@@ -20,5 +20,12 @@ export const styles = StyleSheet.create({
 	navbar: {
 		width: "100%",
 		height: 60,
-	}
+	},
+	tag: {
+		flex: 2,
+		justifyContent: "flex-start",
+		alignItems: "center",
+		backgroundColor: "#fff",
+		width: "100%",
+	},
 });

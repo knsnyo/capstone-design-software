@@ -29,7 +29,8 @@ const Reducer = (state, action) => {
 		//search list
 		case "SEARCH_ITEM": {
 			return {
-
+				...state,
+				search: action.payload,
 			}
 		}
 

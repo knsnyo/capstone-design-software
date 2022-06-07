@@ -12,8 +12,6 @@ import SearchResult from "./screen/SearchResult/SearchResult";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-const SearchStack = createStackNavigator();
-
 const TabNavigator = (props) => {
   //console.log(props.route.params.id);
   return (
@@ -36,13 +34,6 @@ const TabNavigator = (props) => {
         component={WishList}
         options={{
           tabBarIcon: () => <Icon name="star" size={40} color="yellow" />,
-        }}
-      />
-      <Tab.Screen
-        name="Like"
-        component={Like}
-        options={{
-          tabBarIcon: () => <Icon name="heart" size={40} color="red" />,
         }}
       />
       <Tab.Screen
