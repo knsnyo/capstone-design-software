@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { View, Text } from "react-native";
 import ItemList from "../../component/ItemList/ItemList";
 import { Context } from "../../context/Context";
@@ -6,11 +6,13 @@ import { useIsFocused } from "@react-navigation/native";
 
 export default ({ route, navigation }) => {
   const { state, dispatch } = useContext(Context);
+
   const isFocused = useIsFocused();
-  let check = [];
+
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
-    //console.log(route.params.id);
+    let check = [];
     if(isFocused) {
       navigation.setOptions({ title: route.params.id });
   
@@ -23,8 +25,7 @@ export default ({ route, navigation }) => {
               }
             });
           });
-  
-          dispatch({ type: "SEARCH_ITEM", payload: check });
+
           break;
         }
   
@@ -34,8 +35,8 @@ export default ({ route, navigation }) => {
               check.push(item);
             }
           });
-  
-          dispatch({ type: "SEARCH_ITEM", payload: check });
+
+          break;
         }
   
         default: {
@@ -43,12 +44,18 @@ export default ({ route, navigation }) => {
         }
       }
     }
+    setSearch(check);
+
+    return () => {
+      setSearch([]);
+      check = [];
+    }
   }, [isFocused]);
 
   return (
     <View>
-      {state.search.length !== 0 ? (
-        <ItemList list={state.search} />
+      {search.length !== 0 ? (
+        <ItemList list={search} />
       ) : (
         <Text>결과가 없어요</Text>
       )}

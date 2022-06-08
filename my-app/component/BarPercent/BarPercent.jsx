@@ -9,7 +9,7 @@ export default (props) => {
       <View style={styles.percent}>
         <Progress.Bar progress={props.percent} color={props.color}/>
       </View>
-      <Text style={styles.text}>{props.percent * 100}%</Text>
+      <Text style={styles.text}>{(props.percent * 100).toFixed(2)}%</Text>
     </View>
   );
 };
