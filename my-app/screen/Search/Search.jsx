@@ -1,3 +1,4 @@
+import { useIsFocused } from "@react-navigation/native";
 import { useContext, useEffect } from "react";
 import { View } from "react-native";
 import SearchBar from "../../component/SearchBar/SearchBar";
@@ -6,6 +7,7 @@ import { Context } from "../../context/Context";
 import { styles } from "./style";
 
 export default ({navigation}) => {
+  const isFocused = useIsFocused();
   const { state, dispatch } = useContext(Context);
   const genre = [
     "범죄",

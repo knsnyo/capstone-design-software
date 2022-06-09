@@ -30,8 +30,17 @@ export default ({text, use, navigation}) => {
 				break;
 			}
 			case "Search": {
-				navigation.push("SearchResult", {id: text, search: "tag"});
+				let check = []
+				state.list.map((item) => {
+					item.genre.map((genre) => {
+						if (genre === text) {
+							check.push(item);
+						}
+					});
+				});
+				dispatch({type: "SEARCH_ITEM", payload: check});
 
+				navigation.push("SearchResult", {id: text, search: "tag", result: check});
 				break;
 			}
 

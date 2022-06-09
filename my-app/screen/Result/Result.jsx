@@ -67,21 +67,21 @@ export default ({ route, navigation }) => {
         {netflix !== 0 && (
           <BarPercent
             serviceName="Netflix"
-            percent={(netflix / state.wishlist.length).toFixed(2)}
+            percent={Number((netflix / state.wishlist.length).toFixed(2))}
             color="red"
           />
         )}
         {watcha !== 0 && (
           <BarPercent
             serviceName="WatCha"
-            percent={(watcha / state.wishlist.length).toFixed(2)}
+            percent={Number((watcha / state.wishlist.length).toFixed(2))}
             color="pink"
           />
         )}
         {wavve !== 0 && (
           <BarPercent
             serviceName="wavve"
-            percent={(wavve / state.wishlist.length).toFixed(2)}
+            percent={Number((wavve / state.wishlist.length).toFixed(2))}
             color="violet"
           />
         )}
