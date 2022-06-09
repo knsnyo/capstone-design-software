@@ -13,9 +13,9 @@ export default ({ route, navigation }) => {
 
   useEffect(() => {
     let check = [];
-    if(isFocused) {
+    if (isFocused) {
       navigation.setOptions({ title: route.params.id });
-  
+
       switch (route.params.search) {
         case "tag": {
           state.list.map((item) => {
@@ -25,34 +25,29 @@ export default ({ route, navigation }) => {
               }
             });
           });
-
           break;
         }
-  
         case "item": {
           state.list.map((item) => {
             if (-1 !== item.title.indexOf(route.params.id)) {
               check.push(item);
             }
           });
-
           break;
         }
-  
         default: {
           break;
         }
       }
+      setSearch(check);
     }
-    setSearch(check);
 
     return () => {
       setSearch([]);
-      check = [];
-    }
+    };
   }, [isFocused]);
 
-  return (
+  return (   
     <View>
       {search.length !== 0 ? (
         <ItemList list={search} />

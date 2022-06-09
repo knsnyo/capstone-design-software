@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import { View } from "react-native";
-import ItemList from "../../component/ItemList/ItemList";
 import SearchBar from "../../component/SearchBar/SearchBar";
 import TagList from "../../component/TagList/TagList";
 import { Context } from "../../context/Context";

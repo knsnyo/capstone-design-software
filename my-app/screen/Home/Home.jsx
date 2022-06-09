@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Pressable, Text, Dimensions } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
@@ -6,9 +5,6 @@ import { styles } from "./style";
 const width = Dimensions.get("window").width;
 
 export default ({navigation}) => {
-  React.useEffect(() => {
-    console.log(width);
-  }, []);
   return (
     <View style={styles.container}>
       <View style={styles.rowHigh}>
