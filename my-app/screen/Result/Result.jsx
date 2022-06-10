@@ -41,6 +41,10 @@ export default ({ route, navigation }) => {
               wavCount += 1;
               break;
             }
+            case "coupang": {
+              couCount += 1;
+              break;
+            }
           }
         });
       });
@@ -51,6 +55,7 @@ export default ({ route, navigation }) => {
     setNetflix(netCount);
     setWatcha(watCount);
     setWavve(wavCount);
+    setCoupang(couCount);
 
     return () => {
       setCoupang(0);
@@ -83,6 +88,13 @@ export default ({ route, navigation }) => {
             serviceName="wavve"
             percent={Number((wavve / state.wishlist.length).toFixed(2))}
             color="violet"
+          />
+        )}
+        {coupang !== 0 && (
+          <BarPercent
+            serviceName="coupang"
+            percent={Number((coupang / state.wishlist.length).toFixed(2))}
+            color="skyblue"
           />
         )}
       </View>

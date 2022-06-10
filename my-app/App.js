@@ -17,26 +17,29 @@ const ResultStack = createStackNavigator();
 const WishListStack = createStackNavigator();
 const SearchStackNavigator = () => (
   <SearchStack.Navigator
-  screenOptions={{
-    headerTitleAlign: "center",
-  }}>
-    <SearchStack.Screen name="Search" component={Search}/>
+    screenOptions={{
+      headerTitleAlign: "center",
+    }}
+  >
+    <SearchStack.Screen name="Search" component={Search} />
   </SearchStack.Navigator>
 );
 const WishListStackNavigator = () => (
   <WishListStack.Navigator
-  screenOptions={{
-    headerTitleAlign: "center",
-  }}>
-    <WishListStack.Screen name="WishList" component={WishList}/>
+    screenOptions={{
+      headerTitleAlign: "center",
+    }}
+  >
+    <WishListStack.Screen name="WishList" component={WishList} />
   </WishListStack.Navigator>
 );
 const ResultStackNavigator = () => (
   <ResultStack.Navigator
-  screenOptions={{
-    headerTitleAlign: "center",
-  }}>
-    <ResultStack.Screen name="Result" component={Result}/>
+    screenOptions={{
+      headerTitleAlign: "center",
+    }}
+  >
+    <ResultStack.Screen name="Result" component={Result} />
   </ResultStack.Navigator>
 );
 const TabNavigator = (props) => {
@@ -81,10 +84,15 @@ export default () => {
           initialRouteName="Home"
           screenOptions={{
             headerTitleAlign: "center",
+            backgroundColor: "#fff"
           }}
         >
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Menu" component={TabNavigator} options={{headerShown: false}}/>
+          <Stack.Screen
+            name="Menu"
+            component={TabNavigator}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen name="SearchResult" component={SearchResult} />
         </Stack.Navigator>
       </NavigationContainer>

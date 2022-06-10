@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { View, Text, FlatList } from "react-native";
 import Item from "../../component/Item/Item";
-import { Context } from "../../context/Context";
 import { useIsFocused } from "@react-navigation/native";
+import { styles } from "./style";
 
 export default ({ route, navigation }) => {
   const isFocused = useIsFocused();
@@ -14,7 +14,7 @@ export default ({ route, navigation }) => {
   }, [isFocused]);
 
   return (
-    <View>
+    <View style={styles.container}>
       {route.params.result.length !== 0 ? (
         <FlatList
           data={route.params.result}

@@ -10,7 +10,7 @@ export default () => {
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <ItemList list={state.wishlist}/>
+        <ItemList list={state.list}/>
       </View>
     </View>
   );

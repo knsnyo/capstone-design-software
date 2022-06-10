@@ -22,6 +22,8 @@ export default ({navigation}) => {
     "전쟁",
     "역사",
     "코미디",
+    "예능",
+    "리얼리티",
   ];
   return (
     <View style={styles.container}>
